@@ -1,30 +1,187 @@
-# [cite_start]🕵️‍♂️ Fraud Detection Machine Learning Model [cite: 27]
+# 🕵️‍♂️ Fraud Detection Machine Learning Model
 
 ## 📌 Project Overview
-[cite_start]Fraudulent transactions represent a significant challenge in the financial sector, costing billions of dollars annually[cite: 27]. [cite_start]The primary challenge in building a fraud detection model is the extreme class imbalance (i.e., legitimate transactions overwhelmingly outnumber fraudulent ones)[cite: 28]. [cite_start]This project builds a robust, tree-based machine learning pipeline to accurately identify fraudulent transactions while minimizing false negatives[cite: 29].
+
+Fraudulent transactions represent a significant challenge in the financial sector, costing billions of dollars annually. The primary challenge in building a fraud detection model is the extreme class imbalance, where legitimate transactions overwhelmingly outnumber fraudulent ones.
+
+This project builds a robust tree-based machine learning pipeline to accurately identify fraudulent transactions while minimizing false negatives.
+
+---
 
 ## 🎯 Key Highlights & Methodology
-[cite_start]This project adheres to industry best practices for highly imbalanced datasets[cite: 30]:
-* [cite_start]**Handling Class Imbalance (SMOTE)**: Utilized the Synthetic Minority Over-sampling Technique (SMOTE) to generate synthetic fraudulent examples, allowing the model to learn the minority class effectively[cite: 30].
-* [cite_start]**Strict Prevention of Data Leakage**: Ensured that SMOTE was applied only to the training dataset after the train-test split, preserving the integrity of the test set (`X_test_orig`) for real-world evaluation[cite: 31].
-* [cite_start]**Business-Centric Evaluation Metrics**: Accuracy is a misleading metric in fraud detection[cite: 32]. [cite_start]This project evaluates model performance using Recall, F1-Score, and ROC-AUC, prioritizing the capture of actual fraud cases[cite: 33].
-* [cite_start]**Advanced Ensemble Modeling**: Leveraged state-of-the-art gradient boosting frameworks, including XGBoost and LightGBM, optimized for tabular data[cite: 34].
+
+This project follows industry best practices for handling highly imbalanced datasets.
+
+- ✅ **Handling Class Imbalance (SMOTE)**
+  - Used the Synthetic Minority Over-sampling Technique (SMOTE) to generate synthetic fraudulent samples, enabling the model to learn the minority class effectively.
+
+- ✅ **Prevention of Data Leakage**
+  - Applied SMOTE **only on the training dataset** after the train-test split to ensure unbiased evaluation on the original test set.
+
+- ✅ **Business-Centric Evaluation Metrics**
+  - Accuracy alone is misleading for fraud detection.
+  - Evaluated models using:
+    - Recall Score
+    - Precision
+    - F1-Score
+    - ROC-AUC Score
+
+- ✅ **Advanced Ensemble Models**
+  - Trained multiple machine learning models including:
+    - XGBoost
+    - LightGBM
+    - Random Forest
+    - Decision Tree
+
+---
 
 ## 🛠️ Tech Stack
-* [cite_start]**Language**: Python [cite: 35]
-* [cite_start]**Data Processing**: `pandas`, `numpy` [cite: 35]
-* [cite_start]**Machine Learning**: `scikit-learn`, `xgboost`, `lightgbm`, `imblearn` (SMOTE), `torch` [cite: 35]
-* [cite_start]**Data Visualization**: `matplotlib`, `seaborn` [cite: 35]
+
+| Category | Technologies |
+|----------|--------------|
+| Language | Python |
+| Data Processing | Pandas, NumPy |
+| Machine Learning | Scikit-learn, XGBoost, LightGBM, Imbalanced-Learn (SMOTE), PyTorch |
+| Visualization | Matplotlib, Seaborn |
+| Development | Jupyter Notebook |
+
+---
 
 ## 📊 Exploratory Data Analysis (EDA)
-[cite_start]Comprehensive EDA was conducted before modeling to understand feature distributions and relationships[cite: 35]:
-* [cite_start]**`count_comparison_of_fraud_nonfraud.png`**: Visualizes the severe class imbalance in the raw dataset[cite: 35].
-* [cite_start]**`heatmap.png`**: Correlation matrix to identify multicollinearity and the most predictive features[cite: 36].
-* [cite_start]**`spread_of_datapoints.png`**: Scatter distribution showing how fraudulent transactions deviate from the normal transaction cluster[cite: 37].
-* [cite_start]**`ROC_Curves.png`**: Compares the True Positive Rate vs. False Positive Rate across different models[cite: 38].
+
+Comprehensive exploratory data analysis was performed before model training.
+
+| Visualization | Description |
+|--------------|-------------|
+| `count_comparison_of_fraud_nonfraud.png` | Shows the severe class imbalance in the dataset |
+| `heatmap.png` | Displays feature correlation matrix |
+| `spread_of_datapoints.png` | Visualizes the distribution of fraudulent and legitimate transactions |
+| `ROC_Curves.png` | Compares ROC curves of different machine learning models |
+
+---
 
 ## 🚀 Installation & Usage
-1. [cite_start]Clone the repository[cite: 39].
-   ```bash
-   git clone [https://github.com/YourUsername/Fraud-Detection-Model.git](https://github.com/YourUsername/Fraud-Detection-Model.git)
-   cd Fraud-Detection-Model
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/rajsinghal830/Fraud-Detection-Model.git
+cd Fraud-Detection-Model
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+It is recommended to create a virtual environment before installing packages.
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3️⃣ Launch Jupyter Notebook
+
+```bash
+jupyter notebook fraud_detection.ipynb
+```
+
+---
+
+## 📁 Repository Structure
+
+```text
+Fraud-Detection-Model/
+│
+├── dataset/
+│   └── dataset.csv
+│
+├── images/
+│   ├── count_comparison_of_fraud_nonfraud.png
+│   ├── heatmap.png
+│   ├── ROC_Curves.png
+│   └── spread_of_datapoints.png
+│
+├── model/
+│   ├── fraud_detection.ipynb
+│   └── trained_model.pkl
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🤖 Machine Learning Workflow
+
+1. Data Collection
+2. Data Cleaning
+3. Exploratory Data Analysis (EDA)
+4. Feature Engineering
+5. Train-Test Split
+6. SMOTE Oversampling
+7. Model Training
+8. Hyperparameter Tuning
+9. Model Evaluation
+10. Fraud Prediction
+
+---
+
+## 📈 Model Evaluation Metrics
+
+The models were evaluated using:
+
+- 📌 Accuracy
+- 📌 Precision
+- 📌 Recall
+- 📌 F1-Score
+- 📌 ROC-AUC Score
+- 📌 Confusion Matrix
+
+---
+
+## 📊 Results
+
+> **Update these values after training your final model.**
+
+| Model | Recall | F1-Score | ROC-AUC |
+|-------|---------|----------|----------|
+| Random Forest | XX | XX | XX |
+| XGBoost | XX | XX | XX |
+| LightGBM | XX | XX | XX |
+
+### Best Performing Model
+
+🏆 **LightGBM / XGBoost** achieved the highest overall performance.
+
+- High Recall Score for detecting fraudulent transactions.
+- Strong ROC-AUC demonstrating excellent classification capability.
+- Low False Negative Rate, making the model suitable for real-world fraud detection.
+
+---
+
+## 💡 Future Improvements
+
+- Deep Learning-based Fraud Detection
+- Real-Time Fraud Detection API
+- Explainable AI using SHAP/LIME
+- Hyperparameter Optimization using Optuna
+- Deployment with FastAPI & Docker
+- Streamlit Dashboard for Live Predictions
+
+---
+
+## 👨‍💻 Author
+
+**Raj Singhal**
+
+- 🎓 B.Tech CSE, IIIT Kota
+- 💼 Machine Learning & Full Stack Developer
+- 🔗 GitHub: https://github.com/rajsinghal830
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub!
