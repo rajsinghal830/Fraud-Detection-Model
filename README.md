@@ -141,16 +141,6 @@ The models were evaluated using:
 
 ---
 
-## 📊 Results
-
-> **Update these values after training your final model.**
-
-| Model | Recall | F1-Score | ROC-AUC |
-|-------|---------|----------|----------|
-| Random Forest | XX | XX | XX |
-| XGBoost | XX | XX | XX |
-| LightGBM | XX | XX | XX |
-
 ### Best Performing Model
 
 🏆 **LightGBM / XGBoost** achieved the highest overall performance.
